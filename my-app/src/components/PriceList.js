@@ -28,7 +28,7 @@ const PriceList = ({ items, onModifyItem, onDeleteItem }) => {
                         <a className="col-1" onClick={() => { onDeleteItem(item) }}>
                             <ion-icon
                                 class="rounded-circle"
-                                style={{ backgroundColor: 'red', padding: '5px', color: '#fff', fontSize: '30px'}}
+                                style={{ backgroundColor: 'red', padding: '5px', color: '#fff', fontSize: '30px' }}
                                 name='trash-outline'
                             />
                         </a>

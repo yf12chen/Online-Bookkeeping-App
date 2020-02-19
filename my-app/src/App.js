@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import PriceList from './components/PriceList'
 import ViewTab from './components/ViewTab'
 import TotalPrice from './components/TotalPrice'
+import MonthPicker from './components/MonthPicker'
 import {LIST_VIEW, CHART_VIEW} from './utilities'
 
 const items = [
@@ -41,11 +42,13 @@ class App extends Component {
                     onModifyItem={(i) => { alert(i.id) }}
                     onDeleteItem={(i) => { alert(i.id) }}
                 /> */}
-                <TotalPrice income={1000} outcome={1000} />
+                {/* <TotalPrice income={1000} outcome={1000} />
                 <ViewTab 
                     activeTab={CHART_VIEW}
                     onTabChange={(i)=>console.log(i)}
-                />
+                />*/}
+
+                <MonthPicker year={2018} month={3} monthYearSelected={(year, month)=>{console.log(year, month)} } />
             </div>
 
         )
