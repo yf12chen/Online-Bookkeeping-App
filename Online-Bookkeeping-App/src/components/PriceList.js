@@ -18,14 +18,14 @@ const PriceList = ({ items, onModifyItem, onDeleteItem }) => {
                         <span className="col-5"> {item.title} </span>
                         <span className="col-2 font-weight-bold "> {(item.category.type === 'expense' ? '-' : '+')}${item.price} </span>
                         <span className="col-2 ">${item.date} </span>
-                        <a className="col-1" onClick={() => { onModifyItem(item) }}>
+                        <a className="col-1" href="/#" onClick={() => { onModifyItem(item) }}>
                             <ion-icon
                                 class="rounded-circle"
                                 style={{ backgroundColor: 'green', padding: '5px', color: '#fff', fontSize: '30px' }}
                                 name='create-outline'
                             />
                         </a>
-                        <a className="col-1" onClick={() => { onDeleteItem(item) }}>
+                        <a className="col-1" href="/#" onClick={() => { onDeleteItem(item) }}>
                             <ion-icon
                                 class="rounded-circle"
                                 style={{ backgroundColor: 'red', padding: '5px', color: '#fff', fontSize: '30px' }}
