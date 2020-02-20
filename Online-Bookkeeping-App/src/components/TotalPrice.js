@@ -1,13 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-const TotalPrice = ({ income, outcome }) => (
+const TotalPrice = ({ income, expense }) => (
     <div className="container-fluid" >
         <div className="row">
             <div className="col">
                 <h5 className="income">Income：<span>{income}</span></h5>
             </div>
             <div className="col">
-                <h5 className="outcome">Expense：<span>{outcome}</span></h5>
+                <h5 className="expense">Expense：<span>{expense}</span></h5>
             </div>
         </div>
     </div>
@@ -16,6 +16,6 @@ const TotalPrice = ({ income, outcome }) => (
 
 TotalPrice.propTypes = {
     income: PropTypes.number.isRequired,
-    outcome: PropTypes.number.isRequired,
+    expense: PropTypes.number.isRequired,
 }
 export default TotalPrice

@@ -10,7 +10,7 @@ const ViewTab = ({ activeTab, onTabChange }) => (
     <ul className="nav nav-tabs nav-fill my-4">
         <li className="nav-item ">
             <a className={generateLinkClass(activeTab, LIST_VIEW)}
-                href="#"
+                href="/#"
                 onClick={(event) => { event.preventDefault(); onTabChange(LIST_VIEW) }}
             >
                 <ion-icon
@@ -23,7 +23,7 @@ const ViewTab = ({ activeTab, onTabChange }) => (
         </li>
         <li className="nav-item">
             <a className={generateLinkClass(activeTab, CHART_VIEW)}
-                href="#"
+                href="/#"
                 onClick={(event) => { event.preventDefault(); onTabChange(CHART_VIEW) }}
             >
                 <ion-icon

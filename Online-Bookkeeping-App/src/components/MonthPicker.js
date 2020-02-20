@@ -60,15 +60,15 @@ class MonthPicker extends React.Component {
         return (
 
             <div className="dropdown month-picker-component" ref={this.setCheckClick}>
-                <h4>Select Month</h4>
+                <h5>Select Month</h5>
                 <button
-                    className="btn btn-lg btn-secondary dropdown-toggle"
+                    className="btn btn-lg btn-secondary dropdown-toggle w-75"
                     onClick={this.toggleDropDown}
                 >
-                    {`Month: ${addZeroToMonth(selectedMonth)} Year: ${selectedYear}`}
+                    {`${addZeroToMonth(selectedMonth)} / ${selectedYear}`}
                 </button>
                 {isOpen &&
-                    <div className="dropdown-menu" style={{ display: 'block' }}>
+                    <div className="dropdown-menu w-75" style={{ display: 'block' }}>
                         <div className="row">
                             <div className="col border-right years-range" >
                                 {yearRange.map((i, index) =>

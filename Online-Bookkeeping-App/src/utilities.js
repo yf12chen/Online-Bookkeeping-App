@@ -1,5 +1,7 @@
 export const LIST_VIEW='List'
 export const CHART_VIEW='Chart'
+export const TYPE_INCOME='income'
+export const TYPE_EXPENSE='expense'
 
 export const addZeroToMonth =(n)=>{
     return n<10?`0${n}`:n;
