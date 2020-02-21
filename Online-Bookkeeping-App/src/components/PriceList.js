@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const PriceList = ({ items, onModifyItem, onDeleteItem }) => {
     return (
-        <ul className="list-group list-group-flush">
+        <ul className="list-group ">
             {
                 items.map((item) => (
                     <li className="list-group-item d-flex justify-content-between align-items-center"

@@ -65,7 +65,7 @@ class MonthPicker extends React.Component {
                     className="btn btn-lg btn-secondary dropdown-toggle w-75"
                     onClick={this.toggleDropDown}
                 >
-                    {`${addZeroToMonth(selectedMonth)} / ${selectedYear}`}
+                    {`${addZeroToMonth(selectedMonth)} / ${selectedYear} `}
                 </button>
                 {isOpen &&
                     <div className="dropdown-menu w-75" style={{ display: 'block' }}>
