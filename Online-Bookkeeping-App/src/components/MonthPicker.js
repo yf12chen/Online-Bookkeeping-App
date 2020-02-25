@@ -30,6 +30,7 @@ class MonthPicker extends React.Component {
     this.setState({
       isOpen: false
     });
+    this.props.monthYearSelected(this.state.selectedYear, this.state.selectedMonth)
   };
   toggleDropDown = e => {
     e.preventDefault();

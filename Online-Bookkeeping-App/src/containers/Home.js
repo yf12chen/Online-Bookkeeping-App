@@ -53,11 +53,11 @@ export const items = [
   }
 ];
 
-const newItem = {
+export const newItem = {
   id: 4,
   title: "A New Entry",
   price: 300,
-  date: "2020-02-21",
+  date: "2020-01-21",
   cid: 1
 };
 
@@ -66,7 +66,7 @@ class Home extends Component {
     super(props);
     this.state = {
       items,
-      currentDate: parseToYearAndMonth(),
+      currentDate: parseToYearAndMonth('2020-01-02'),
       tabView: LIST_VIEW
     };
   }
@@ -116,8 +116,9 @@ class Home extends Component {
         return item;
       })
       .filter(item => {
-        let itemMonth = new Date(item.date);
-        return itemMonth.getMonth() === this.state.currentDate.month - 1;
+        let itemDate = new Date(item.date);
+        return (itemDate.getMonth() === this.state.currentDate.month - 1
+          && itemDate.getFullYear() === this.state.currentDate.year)
       });
 
     let totalIncome = 0;
@@ -137,7 +138,7 @@ class Home extends Component {
             <h1 className="my-4">Personal Online Bookkeeping</h1>
           </div>
           <div className="row">
-            <div className="col">
+            <div className="col ml-3">
               <MonthPicker
                 year={currentDate.year}
                 month={currentDate.month}
@@ -159,7 +160,7 @@ class Home extends Component {
               onDeleteItem={this.deleteItem}
             />
           ) : (
-              <div>A Pie Diagram {console.log(this.state.currentDate)}</div>
+              <h1 className="chart-title">A Pie Diagram </h1>
             )}
         </div>
       </React.Fragment>
