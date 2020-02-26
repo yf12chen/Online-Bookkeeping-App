@@ -1,25 +1,28 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import './App.css'
 import Home from './containers/Home'
+import Create from './containers/Create'
 
 
 class App extends Component {
     render() {
         return (
-            <div className="App">
-                {/* <PriceList
-                    items={items}
-                    onModifyItem={(i) => { alert(i.id) }}
-                    onDeleteItem={(i) => { alert(i.id) }}
-                /> */}
-                {/* <TotalPrice income={1000} outcome={1000} />
-                <ViewTab 
-                    activeTab={CHART_VIEW}
-                    onTabChange={(i)=>console.log(i)}
-                />*/}
-                {/* <MonthPicker year={2018} month={3} monthYearSelected={(year, month)=>{console.log(year, month)} } /> */}
-                <Home />
-            </div>
+            <Router>
+                <div className="App">
+                    <ul>
+                        <Link to='/'>Home</Link>
+                        <Link to='/create'>Create</Link>
+                        <Link to='/edit/10'>Edit</Link>
+                    </ul>
+                    <div className='container pb-5'>
+                        <Route path='/' exact component={Home} />
+                        <Route path='/create' component={Create} />
+                        <Route path='/edit/:id' component={Create} />
+                    </div>
+                </div>
+            </Router>
+
 
         )
     }
