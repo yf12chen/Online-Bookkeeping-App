@@ -9,7 +9,7 @@ class CategorySelect extends React.Component {
         }
     }
 
-    selectedCategory = (event, category) => {
+    setSelectedCategory = (event, category) => {
         this.setState({
             selectedCategoryId: category.id
         })
@@ -17,15 +17,16 @@ class CategorySelect extends React.Component {
         event.preventDefault()
     }
     render() {
-        const { categories, selectedCategory } = this.props
+        const { categories } = this.props
+        const { selectedCategoryId } = this.state
         return (
             <div className="category-select-component">
                 <div className="row">
                     {
                         categories.map((category, index) => {
-                            const activeClassName = (selectedCategory && selectedCategory.id === category.id) ? 'category-item col-3 active' : 'category-item col-3'
+                            const activeClassName = (selectedCategoryId === category.id) ? 'category-item col-3 active' : 'category-item col-3'
                             return (
-                                <div className={activeClassName} key={index} onClick={(event) => { this.selectedCategory(event, category) }}>
+                                <div className={activeClassName} key={index} onClick={(event) => { this.setSelectedCategory(event, category) }}>
                                     <ion-icon
                                         class="rounded-circle"
                                         style={{
