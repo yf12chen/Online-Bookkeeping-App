@@ -13,7 +13,7 @@ class Create extends React.Component {
     render() {
         return (
             <div className="create-page py-3 px-3 rounded mt-3" style={{ background: '#fff' }}>
-                <CategorySelect categories={3} onSelectCategory={() => { }} />
+                {/* <CategorySelect categories={3} onSelectCategory={() => { }} /> */}
 
             </div>
         )

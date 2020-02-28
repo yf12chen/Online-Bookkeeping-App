@@ -5,6 +5,7 @@ import ViewTab from "../components/ViewTab";
 import TotalPrice from "../components/TotalPrice";
 import MonthPicker from "../components/MonthPicker";
 import CreateBtn from "../components/CreateBtn";
+import { Tabs, Tab } from "../components/Tabs";
 
 import {
   LIST_VIEW,
@@ -61,19 +62,21 @@ export const newItem = {
   cid: 1
 };
 
+const tabsIndex = [LIST_VIEW, CHART_VIEW];
+
 class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
       items,
       currentDate: parseToYearAndMonth('2020-01-02'),
-      tabView: LIST_VIEW
+      tabView: tabsIndex[0]
     };
   }
 
-  changeView = view => {
+  changeView = (index) => {
     this.setState({
-      tabView: view
+      tabView: tabsIndex[index]
     });
   };
   monthYearSelected = (year, month) => {
@@ -151,7 +154,27 @@ class Home extends Component {
           </div>
         </header>
         <div className="content-area py-3 px-3">
-          <ViewTab activeTab={tabView} onTabChange={this.changeView} />
+
+          <Tabs activeIndex={0} onTabChange={this.changeView}>
+            <Tab >
+              <ion-icon
+                class="rounded-circle mr-2"
+                style={{ color: "#007bff", fontSize: "25px" }}
+                name="list-outline"
+              />
+              List
+            </Tab>
+            <Tab>
+              <ion-icon
+                class="rounded-circle mr-2"
+                style={{ color: "#007bff", fontSize: "25px" }}
+                name="pie-chart-outline"
+              />
+              Chart
+            </Tab>
+          </Tabs>
+
+
           <CreateBtn onClick={this.createItem} />
           {tabView === LIST_VIEW ? (
             <PriceList
