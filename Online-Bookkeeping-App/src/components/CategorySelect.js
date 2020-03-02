@@ -20,31 +20,31 @@ class CategorySelect extends React.Component {
         const { categories } = this.props
         const { selectedCategoryId } = this.state
         return (
-            <div className="category-select-component">
-                <div className="row">
-                    {
-                        categories.map((category, index) => {
-                            const activeClassName = (selectedCategoryId === category.id) ? 'category-item col-3 active' : 'category-item col-3'
-                            return (
-                                <div className={activeClassName} key={index} onClick={(event) => { this.setSelectedCategory(event, category) }}>
-                                    <ion-icon
-                                        class="rounded-circle"
-                                        style={{
-                                            backgroundColor: "",
-                                            padding: "5px",
-                                            color: "#555",
-                                            fontSize: "50px"
-                                        }}
-                                        name={category.iconName}
-                                    />
 
-                                </div>
-                            )
-                        })
-                    }
-                </div>
+            <div className="row category-select-component">
+                {categories.map((category, index) => {
+                    const activeClassName = (selectedCategoryId === category.id) ? 'category-item col-3 active' : 'category-item col-3'
 
+                    return (
+                        <div className={activeClassName} key={index} role="button" style={{ textAlign: 'center' }}
+                            onClick={(event) => { this.setSelectedCategory(event, category) }}>
+                            <ion-icon
+                                class="rounded-circle"
+                                style={{
+                                    backgroundColor: (category.id === selectedCategoryId) ? '#347eff' : '#efefef',
+                                    padding: "10px",
+                                    color: (category.id === selectedCategoryId) ? '#fff' : 'black',
+                                    fontSize: "50px"
+                                }}
+                                name={category.iconName}
+                            />
+                            <p>{category.name}</p>
+                        </div>
+                    )
+
+                })}
             </div>
+
         )
     }
 }

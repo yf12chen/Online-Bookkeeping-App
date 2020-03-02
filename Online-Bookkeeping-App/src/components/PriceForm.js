@@ -13,7 +13,7 @@ class PriceForm extends React.Component {
     }
     state = {
         validatePass: true,
-        errorMessage: '',
+        errorMessage: [],
     }
     sumbitForm = (event) => {
 
@@ -26,7 +26,7 @@ class PriceForm extends React.Component {
             if (price < 0) {
                 this.setState({
                     validatePass: false,
-                    errorMessage: 'Price must be greater than 0'
+                    errorMessage: this.state.errorMessage.push('Price must be greater than 0')
                 })
             } else if (!isValidDate(date)) {
                 this.setState({
@@ -69,7 +69,7 @@ class PriceForm extends React.Component {
                     <label htmlFor="price">Price *</label>
                     <div className="input-group">
                         <div className="input-group-prepend">
-                            <span className="input-group-text">¥</span>
+                            <span className="input-group-text">$</span>
                         </div>
                         <input
                             type="number"
@@ -81,7 +81,7 @@ class PriceForm extends React.Component {
                     </div>
                 </div>
                 <div className="form-group">
-                    <label htmlFor="date">日期 *</label>
+                    <label htmlFor="date">Date *</label>
                     <input
                         type="date" className="form-control"
                         id="date" placeholder="Please enter a date"

@@ -1,43 +1,43 @@
 export const testCategories = [
     {
         "name": "Travel",
-        "iconName": "ios-plane",
+        "iconName": "airplane-outline",
         "id": "1",
         "type": "expense"
     },
     {
         "name": "Restaurant",
-        "iconName": "ios-restaurant",
+        "iconName": "restaurant-outline",
         "id": "2",
         "type": "expense"
     },
     {
         "name": "Shopping",
-        "iconName": "ios-basket",
+        "iconName": "basket-outline",
         "id": "3",
         "type": "expense"
     },
     {
         "name": "Digital",
-        "iconName": "ios-phone-portrait",
+        "iconName": "phone-portrait-outline",
         "id": "4",
         "type": "expense"
     },
     {
         "name": "Salary",
-        "iconName": "ios-card",
+        "iconName": "wallet-outline",
         "id": "10",
         "type": "income"
     },
     {
         "name": "Part-time",
-        "iconName": "ios-cash",
+        "iconName": "cash-outline",
         "id": "11",
         "type": "income"
     },
     {
         "name": "Ivestment",
-        "iconName": "logo-yen",
+        "iconName": "card-outline",
         "id": "12",
         "type": "income"
     },
@@ -47,53 +47,53 @@ export const testItems = [
     {
         "title": "buy stuff for kitten",
         "price": 100,
-        "date": "2018-08-15",
-        "monthCategory": "2018-8",
+        "date": "2020-02-15",
+        "monthCategory": "2020-02",
         "id": "_kly1klf4g",
         "cid": "1",
         "timestamp": 1534291200000
     },
     {
-        "title": "这是我的工资",
+        "title": "My Salary",
         "price": 20000,
-        "date": "2018-08-18",
-        "monthCategory": "2018-8",
+        "date": "2020-02-18",
+        "monthCategory": "2020-02",
         "id": "_bd16bjeen",
         "cid": "2",
         "timestamp": 1534550400000
     },
     {
-        "title": "和哥们一起喝酒",
+        "title": "Drinks",
         "price": 300,
-        "date": "2018-08-20",
-        "monthCategory": "2018-8",
+        "date": "2020-02-20",
+        "monthCategory": "2020-02",
         "id": "_jjfice21k",
         "cid": "3",
         "timestamp": 1534723200000
     },
     {
-        "title": "理财收入",
+        "title": "Mutual Fund",
         "price": 1000,
-        "date": "2018-08-11",
-        "monthCategory": "2018-8",
+        "date": "2020-02-21",
+        "monthCategory": "2020-02",
         "id": "_1fg1wme63",
         "cid": "11",
         "timestamp": 1533945600000
     },
     {
-        "title": "理财收入",
+        "title": "Mutual Fund",
         "price": 300,
-        "date": "2018-11-15",
-        "monthCategory": "2018-11",
+        "date": "2020-02-27",
+        "monthCategory": "2020-02",
         "id": "_qryggm5y8",
         "cid": "12",
         "timestamp": 1534291200000
     },
     {
-        "title": "请别人吃饭",
+        "title": "restaurant",
         "price": 300,
-        "date": "2018-11-15",
-        "monthCategory": "2018-11",
+        "date": "2020-02-24",
+        "monthCategory": "2020-02",
         "id": "_qryggm511",
         "cid": "3",
         "timestamp": 1534291200000
